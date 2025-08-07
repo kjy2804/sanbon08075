@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>병원 & 약국 찾기</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 병원 & 약국 찾기</h1>
+            <p>현재 위치 주변의 의료시설을 찾아보세요</p>
+        </header>
+
+        <div class="controls">
+            <button id="getLocationBtn" class="btn primary">📍 내 위치 찾기</button>
+            <div class="filter-buttons">
+                <button class="btn filter active" data-type="internal">🩺 내과</button>
+                <button class="btn filter" data-type="orthopedic">🦴 정형외과</button>
+                <button class="btn filter" data-type="dental">🦷 치과</button>
+                <button class="btn filter" data-type="ent">👂 이비인후과</button>
+                <button class="btn filter" data-type="ophthalmology">👁️ 안과</button>
+                <button class="btn filter" data-type="pediatric">👶 소아과</button>
+                <button class="btn filter" data-type="gynecology">👩‍⚕️ 산부인과</button>
+                <button class="btn filter" data-type="dermatology">🧴 피부과</button>
+                <button class="btn filter" data-type="neurology">🧠 신경과</button>
+                <button class="btn filter" data-type="general_hospital">🏥 대형병원</button>
+                <button class="btn filter" data-type="pharmacy">💊 약국</button>
+            </div>
+        </div>
+
+        <div class="status" id="status">
+            위치를 찾으려면 '내 위치 찾기' 버튼을 클릭하세요
+        </div>
+
+        <div class="map-container">
+            <div id="map">
+                <div class="map-placeholder">
+                    <p>🗺️ 지도가 여기에 표시됩니다</p>
+                    <p>위치 권한을 허용하고 '내 위치 찾기'를 클릭하세요</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="facilities-list" id="facilitiesList">
+            <h3>주변 병원/약국</h3>
+            <div id="facilityItems" class="facility-items">
+                <!-- 시설 목록이 여기에 동적으로 추가됩니다 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
